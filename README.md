@@ -4,9 +4,9 @@ Simple TCP port scanner written in Golang
 
 ## Usage
 
+```
 Usage: ./goports [-t <cpu threads> -c <concurrency> -to <timeout in ms> -v] -ip <ip or cidr> -p <ports>
 
-```
 Example: ./goports -ip 192.168.73.1/28 -p 22,80,443,8000-8100
 
   -c int
