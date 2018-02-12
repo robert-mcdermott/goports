@@ -12,21 +12,19 @@ Example: ./goports -ip 192.168.73.1/28 -p 22,80,443,8000-8100
   -c int
   	Optional: set number of concurrent port open operations to use; defaults to 32 per logical CPU (default 128)
   
-  -h	print usage information
-
   -ip string
     	Required: IP address or CIDR block to scan
 
   -p string
     	Required: Set of ports to scan; individal ports separated by "," port ranges separated by "-" (22,80,8000-8100)
 
-  -q	Optional: quiet mode; suppress the summary report
-
   -t int
     	Optional: set number of CPU threads to use; defaults to the number of logical CPUs in your system (default 4)
 
   -to int
     	Optional: Specify the amount of time to wait in milliseconds; defaults to 100  (default 100)
+
+  -q	Optional: quiet mode; suppress the summary report
 
   -v	Optional: Turn on verbose output mode; shows both open and closed ports
 
