@@ -29,7 +29,7 @@ func main() {
 	var toFlag = flag.Int("to", 100, "Optional: Specify the amount of time to wait in milliseconds; defaults to 100 ")
 	var tFlag = flag.Int("t", runtime.NumCPU(), "Optional: set number of CPU threads to use; defaults to the number of logical CPUs in your system")
 	var cFlag = flag.Int("c", runtime.NumCPU()*32, "Optional: set number of concurrent port open operations to use; defaults to 32 per logical CPU")
-	var vFlag = flag.Bool("v", false, "Optional: Turn on verbose output mode; shows both open and closed ports")
+	var vFlag = flag.Bool("v", false, "Optional: Turn on verbose output mode; shows both open and closed ports and any errors encountered during connection")
 	var qFlag = flag.Bool("q", false, "Optional: quiet mode; suppress the summary report")
 	var hFlag = flag.Bool("h", false, "print usage information")
 
