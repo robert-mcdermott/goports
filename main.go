@@ -19,6 +19,7 @@ import (
 type scanResult struct {
 	Port    int
 	Success bool
+	Err     error
 }
 
 func main() {
@@ -199,15 +200,16 @@ func scanPort(host string, port int, wg *sync.WaitGroup, sema chan struct{}, tim
 	result := scanResult{
 		Port:    port,
 		Success: err == nil,
+		Err:     err,
 	}
 	runtime.Gosched()
 	if conn != nil {
 		conn.Close()
 	}
 	if result.Success == true {
-		fmt.Println(host, result.Port, "open")
+		fmt.Printf("%s:%d, %s\n", host, result.Port, "open")
 	} else if *verbose == true {
-		fmt.Println(host, result.Port, "closed")
+		fmt.Printf("%s:%d, %s, %s\n", host, result.Port, "closed", result.Err)
 	}
 
 	return &result
