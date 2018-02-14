@@ -1,4 +1,4 @@
-// Simple concurrent TCP port scanning utiliy
+// Simple concurrent TCP port scanning utility
 package main
 
 import (
